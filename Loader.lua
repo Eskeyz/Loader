@@ -10,6 +10,8 @@ elseif game.PlaceId == 13464725108 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/hithop.lua"))()
 elseif game.PlaceId == 10857807258 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/boxing.lua"))()
+elseif game.PlaceId == 14093680297 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/zombievsfriends.lua"))()
 else
     game.Players.LocalPlayer:Kick("Game not Support! - Eskey")
 end
