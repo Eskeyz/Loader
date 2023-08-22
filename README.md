@@ -5,6 +5,7 @@
 - Racing Rocket
 - Boxing Friends Simulator
 - Zombie vs Friends
+- Obby Advanture [Races]
 
 ## Loader
 ```
