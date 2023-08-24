@@ -6,6 +6,7 @@
 - Boxing Friends Simulator
 - Zombie vs Friends
 - Obby Advanture [Races]
+- Motorcycle Race
 
 ## Loader
 ```
