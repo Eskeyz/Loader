@@ -9,6 +9,7 @@
 - Motorcycle Race
 - Billy Race
 - Cart Ride
+- Kick It Simulator
 
 ## Loader
 ```
