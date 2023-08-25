@@ -7,6 +7,7 @@
 - Zombie vs Friends
 - Obby Advanture [Races]
 - Motorcycle Race
+- Billy Race
 
 ## Loader
 ```
