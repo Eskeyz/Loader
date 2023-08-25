@@ -16,6 +16,8 @@ elseif game.PlaceId == 13778544303 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/motorcycle.lua"))()
 elseif game.PlaceId == 13157300965 then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/billyrace.lua"))()
+elseif game.PlaceId == 14508327597 then
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Games/cartride.lua"))()
 else
     game.StarterGui:SetCore("SendNotification", {
         Title = "Game not supported";

@@ -8,6 +8,7 @@
 - Obby Advanture [Races]
 - Motorcycle Race
 - Billy Race
+- Cart Ride
 
 ## Loader
 ```
