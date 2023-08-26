@@ -10,6 +10,7 @@
 - Billy Race
 - Cart Ride
 - Kick It Simulator
+- Yeet a Plane Simulator
 
 ## Loader
 ```
