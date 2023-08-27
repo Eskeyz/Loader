@@ -12,7 +12,7 @@
 - Kick It Simulator
 - Yeet a Plane Simulator
 
-## Loader
+## Get it here
 ```
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Eskeyz/Loader/main/Loader.lua"))()
+https://raw.githubusercontent.com/Eskeyz/Loader/main/list.txt
 ```
