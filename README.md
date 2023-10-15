@@ -1,2 +1,2 @@
-# Join My Discord
-https://dsc.gg/eskeyio
+# This is my all roblox scripts repository.
+## Closed Source.
