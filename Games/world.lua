@@ -1,5 +1,9 @@
-local Artist = workspace.Settings.selectedsong:GetAttribute("Artist")
-local Title = workspace.Settings.selectedsong:GetAttribute("Title")
+local Player = game.Players.LocalPlayer
+
+local GUIModel = Instance.new("Model")
+GUIModel.Name = "MyGUI"
+GUIModel.Parent = Player
+
 local ScreenGui = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local TextLabel = Instance.new("TextLabel")
@@ -7,7 +11,7 @@ local UITextSizeConstraint = Instance.new("UITextSizeConstraint")
 local TextLabel_2 = Instance.new("TextLabel")
 local UITextSizeConstraint_2 = Instance.new("UITextSizeConstraint")
 
-ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.Parent = GUIModel
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
 Frame.Parent = ScreenGui
@@ -53,27 +57,17 @@ UITextSizeConstraint_2.Parent = TextLabel_2
 UITextSizeConstraint_2.MaxTextSize = 16
 
 local function UpdateText()
-	local OldArtist = TextLabel.Text
-	local OldTitle = TextLabel_2.Text
+    local NewArtist = workspace.Settings.selectedsong:GetAttribute("Artist")
+    local NewTitle = workspace.Settings.selectedsong:GetAttribute("Title")
 
-	-- Looping untuk mengetahui apakah ada perubahan pada nilai variabel `Artist` dan `Title`
-	while true do
-		local NewArtist = workspace.Settings.selectedsong:GetAttribute("Artist")
-		local NewTitle = workspace.Settings.selectedsong:GetAttribute("Title")
-
-		-- Jika ada perubahan, perbarui teks pada GUI
-		if NewArtist ~= OldArtist or NewTitle ~= OldTitle then
-			TextLabel.Text = NewTitle
-			TextLabel_2.Text = NewArtist
-
-			-- Perbarui nilai `OldArtist` dan `OldTitle`
-			OldArtist = NewArtist
-			OldTitle = NewTitle
-		end
-
-		-- Tunggu 1 detik
-		wait(1)
-	end
+    TextLabel.Text = NewTitle
+    TextLabel_2.Text = NewArtist
 end
 
-game:GetService("RunService").Heartbeat:Connect(UpdateText)
+workspace.Settings.selectedsong.AttributeChanged:Connect(function(attribute)
+    if attribute == "Artist" or attribute == "Title" then
+        UpdateText()
+    end
+end)
+
+UpdateText()
